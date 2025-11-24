@@ -143,7 +143,7 @@ attributes #1 = { "frame-pointer"="all" "no-trapping-math"="true" "stack-protect
 
 **LLVM IR** 的结构：
 
-![image-20251123233503716](C:\Users\chen\AppData\Roaming\Typora\typora-user-images\image-20251123233503716.png)
+![structure_of_IR](https://github.com/YLChenZ/LLVM-Pass-For-Beginner/blob/master/pics/structure_of_IR.png)
 
 这里的**Module**包含了所有的内容，这里的**Function**有三个：**main**， **__isoc99_scanf** 和 **printf**，这里只有**Function** **main**有一个**Basic Block**，里面包含了多条指令。
 
@@ -352,4 +352,5 @@ llvmGetPassPluginInfo() {
 ```
 opt -S --load-pass-plugin=../build/skeleton/SkeletonPass.so -passes=skeleton example.ll -o example_opt.ll
 ```
+
 
